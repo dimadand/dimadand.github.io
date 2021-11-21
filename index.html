@@ -260,8 +260,13 @@
                         var months = Math.floor(days/31);
                         var years = Math.floor(months/12);
                         var message = years + ' years and ' + months % 12 + ' months';
-                        
-                        return message;
+                        if (month % 12 == 0) {
+                            return years + ' years';
+                        } else if (years == 0) {
+                            return months % 12 + ' months';
+                        } else {
+                            return message;
+                        }
                       }
                       document.getElementById("period").innerHTML = calcDate(today, start);
                     </script>
