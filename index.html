@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Page Title</title>
+        <title>DVORETSKYI.CV</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -247,7 +247,7 @@
             <div class="main">
                 <div class="work">
                     <h2><a name="work"></a>Work Experience</h2>
-                    <p id="period"><p>
+                    <p id="period"></p>
                     <script>
                       var today, start;
                       start = new Date(2018, 1, 1);
@@ -255,10 +255,12 @@
                       function calcDate(date1,date2) {
                         var diff = Math.floor(date1.getTime() - date2.getTime());
                         var day = 1000 * 60 * 60 * 24;
+            
                         var days = Math.floor(diff/day);
                         var months = Math.floor(days/31);
                         var years = Math.floor(months/12);
                         var message = years + ' years and ' + months % 12 + ' months';
+                        
                         return message;
                       }
                       document.getElementById("period").innerHTML = calcDate(today, start);
